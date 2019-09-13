@@ -5,7 +5,7 @@ inputs:
     description: 'Tag of image'
     required: true
   docker-file:  # tag of image
-    description: /Dockerfile
+    description: 'Dockerfile'
     required: true
 runs:
   using: 'docker'
