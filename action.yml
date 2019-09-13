@@ -6,5 +6,6 @@ inputs:
     required: true
 runs:
   using: 'docker'
+  image: 'Dockerfile'
   args:
   -  echo ${{ gcp-service-account }} > keyfile.json
