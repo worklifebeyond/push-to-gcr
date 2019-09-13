@@ -1,12 +1,10 @@
 name: 'Push To gcr.io'
 description: 'Push docker image to Google Cloud Registry'
 inputs:
-  image-tag:  # tag of image
-    description: 'Tag of image'
-    required: true
-  docker-file:  # tag of image
-    description: 'Dockerfile'
+  gcp-service-account:  # tag of image
+    description: 'gcp service account'
     required: true
 runs:
   using: 'docker'
-  image: ${{ inputs.docker-file }}
+  args:
+  -  echo ${{ gcp-service-account }} > keyfile.json
