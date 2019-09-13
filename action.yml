@@ -8,4 +8,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-  -  echo ${{ gcp-service-account }} > keyfile.json
+  -  echo ${{ inputs.gcp-service-account }} > keyfile.json
